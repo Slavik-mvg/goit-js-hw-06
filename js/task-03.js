@@ -12,3 +12,21 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+/*Используй массив объектов images для создания
+элементов <img> вложенных в <li>. Для создания разметки используй
+шаблонные строки и метод insertAdjacentHTML().*/
+
+const conteiner =
+  document.querySelector('.gallery');
+console.dir(conteiner);
+
+const mark = images
+  .map(
+    ({ url, alt }) => `<li>
+<img src ="${url}" alt="${alt}">
+</li > `
+  )
+  .join('');
+console.log(mark);
+conteiner.insertAdjacentHTML('beforeend', mark);
