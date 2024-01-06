@@ -24,9 +24,18 @@ console.dir(conteiner);
 const mark = images
   .map(
     ({ url, alt }) => `<li>
-<img src ="${url}" alt="${alt}">
+<img src ="${url}" alt="${alt}" height = '200px'>
 </li > `
   )
   .join('');
 console.log(mark);
 conteiner.insertAdjacentHTML('beforeend', mark);
+
+
+  conteiner.style.display = 'flex';
+  conteiner.style.flexWrap = 'wrap' ;
+  conteiner.style.gap = '20px';
+
+  conteiner.style.listStyle = 'none';
+  
+  conteiner.style.justifyContent = 'center';
