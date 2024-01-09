@@ -31,11 +31,10 @@ const mark = images
 console.log(mark);
 conteiner.insertAdjacentHTML('beforeend', mark);
 
+conteiner.style.display = 'flex';
+conteiner.style.flexWrap = 'wrap';
+conteiner.style.gap = '20px';
 
-  conteiner.style.display = 'flex';
-  conteiner.style.flexWrap = 'wrap' ;
-  conteiner.style.gap = '20px';
+conteiner.style.listStyle = 'none';
 
-  conteiner.style.listStyle = 'none';
-  
-  conteiner.style.justifyContent = 'center';
+conteiner.style.justifyContent = 'center';
